@@ -5,7 +5,7 @@ Use it on your own risk.
 
 ## Installation
 ```
-wget -N https://raw.githubusercontent.com/zoldur/Mano/master/mano_install.sh
+wget -N https://raw.githubusercontent.com/zoldur/Manocoin/master/mano_install.sh
 bash mano_install.sh
 ```
 ***
