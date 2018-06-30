@@ -6,7 +6,7 @@ CONFIGFOLDER='/root/.mano'
 COIN_DAEMON='manod'
 COIN_CLI='mano-cli'
 COIN_PATH='/usr/local/bin/'
-COIN_TGZ='https://github.com/zoldur/Manocoin/releases/download/v1.0.0.0/mano.tar.gz'
+COIN_TGZ='https://github.com/MasternodeFoundation/MANOcoin/releases/download/v1.0.1/MANO-bin-linux64.tar.gz'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='Manocoin'
 COIN_PORT=5982
@@ -25,7 +25,7 @@ function download_node() {
   cd $TMP_FOLDER >/dev/null 2>&1
   wget -q $COIN_TGZ
   compile_error
-  tar xvzf $COIN_ZIP -C $COIN_PATH >/dev/null 2>&1
+  tar xvzf $COIN_ZIP --strip 1 -C $COIN_PATH >/dev/null 2>&1
   cd - >/dev/null 2>&1
   rm -rf $TMP_FOLDER >/dev/null 2>&1
   clear
